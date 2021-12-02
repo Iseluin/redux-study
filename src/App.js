@@ -6,7 +6,8 @@ import { actionCreators } from "./state";
 function App() {
   const account = useSelector((state) => state.account);
   const dispatch = useDispatch();
-  const { deposit, withdraw } = bindActionCreators(actionCreators, dispatch);
+  
+  const { deposit, withdraw, multiply } = bindActionCreators(actionCreators, dispatch);
 
   console.log(deposit, withdraw);
   console.log(account);
@@ -16,6 +17,7 @@ function App() {
 
       <button onClick={() => deposit(100)}>Deposit</button>
       <button onClick={() => withdraw(100)}>Withdraw</button>
+      <button onClick={() => multiply(100)}>Multiply</button>
     </div>
   );
 }

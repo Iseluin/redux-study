@@ -15,3 +15,12 @@ export const withdraw = (amount) => {
         })
     }
 }
+
+export const multiply = (amount) => {
+    return (dispatch) => {
+        dispatch({
+            type: "multiply",
+            payload: amount
+        })
+    }
+}
